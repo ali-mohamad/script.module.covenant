@@ -70,7 +70,7 @@ class source:
             for i in r:                
                 try:
                     q = source_utils.label_to_quality(i[1])
-                    sources.append({'source': 'CDN', 'quality': q, 'language': 'en', 'url': i[0], 'direct': True, 'debridonly': False})                
+                    sources.append({'source': 'CDN', 'quality': q, 'language': 'en', 'url': i[0] + '|Referer=' + url, 'direct': True, 'debridonly': False})                
                 except:
                     pass
 
